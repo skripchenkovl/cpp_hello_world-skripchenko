@@ -15,6 +15,6 @@ jobs:
           g++ -o app app.cpp
       - name: Run Date Test
         run: |
-          chmod +x ./tests/test1.sh
-          ./tests/test1.sh
+          chmod +x ./tests/test-1.sh
+          ./tests/test-1.sh
         shell: bash
