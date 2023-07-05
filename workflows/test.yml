@@ -14,6 +14,6 @@ run: pip install -r requirements.txt
 run: python3 ./src/app/app.py &
 - name: Run Unit Tests
 run: |
-chmod +x ./test/test.sh
-./tests/test1.sh
+chmod +x ./tests/test-1.sh
+./tests/test-1.sh
 shell: bash
