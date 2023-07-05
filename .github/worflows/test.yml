@@ -1,21 +1,24 @@
-name: Сборка и тестирование
-on:
-  push:
-    branches:
-      - namber2
+name: Workflow
+
+on: dispatch
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout репозитория
+      - name: Checkout
         uses: actions/checkout@v3
-      - name:  Зависимости
+
+      - name: Requirements
         run: |
           sudo apt-get update
           sudo apt-get install -y g++
-      - name: Сборка приложения
+
+      - name: App
         run: |
           g++ -o app app.cpp
-      - name: Тест
+
+      - name: Run Date Test
         run: |
-          bash tests/test-1.sh
+          chmod +x ./tests/test-1.sh
+          ./tests/test-1.sh
+        shell: bash
